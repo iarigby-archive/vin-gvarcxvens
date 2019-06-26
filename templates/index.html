@@ -12,8 +12,14 @@
 </head>
 
 <body>
-
   <p>Hello, {{name}}</p>
 
-  <srcipt src="js/script.js"></script>
+  {% for element in quotes %}
+  <div class="listing">
+    <p> {{element}}</p>
+    <img src='http://localhost:5000/{{element.image_url}}'/>
+    <p> {{element.text}} </p>
+  </div>
+  {% endfor %}
+  <script src="js/script.js"></script>
 </body>
